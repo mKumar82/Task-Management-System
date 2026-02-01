@@ -1,8 +1,7 @@
-import toast from "react-hot-toast";
-
-const API_URL = "http://localhost:4000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const apiFetch = async (url: string, options: RequestInit = {}) => {
+  console.log("api url", API_URL);
   const token = localStorage.getItem("accessToken");
 
   const res = await fetch(`${API_URL}${url}`, {

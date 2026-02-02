@@ -103,16 +103,16 @@ DATABASE_URL=postgresql://<user>:<password>@<host>:<port>/<db>
 ACCESS_TOKEN_SECRET=your_access_secret
 REFRESH_TOKEN_SECRET=your_refresh_secret
 
-## Frontend Environment Variables
+Frontend Environment Variables
 
-### Frontend (`.env.local`)
+Frontend (`.env.local`)
 
 ```env
 NEXT_PUBLIC_API_URL=https://task-management-system-svk7.vercel.app
 
----
+⸻
 
-## 🛠 Backend Setup (Local)
+ 🛠 Backend Setup (Local)
 
 cd backend
 npm install
@@ -120,7 +120,7 @@ npx prisma generate
 npx prisma migrate dev
 npm run dev
 
----
+⸻
 
 ## 🛠 Frontend Setup (Local)
 

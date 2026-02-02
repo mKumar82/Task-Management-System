@@ -1,10 +1,11 @@
 import { redirect } from "next/navigation";
 import toast from "react-hot-toast";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const logout = async () => {
   const refreshToken = localStorage.getItem("refreshToken");
 
-  await fetch("http://localhost:4000/api/auth/logout", {
+  await fetch(`${API_URL}/api/auth/logout`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ refreshToken }),
@@ -18,7 +19,7 @@ export const logout = async () => {
 
 export const refreshSession = async () => {
   try {
-    const res = await fetch("http://localhost:4000/api/auth/refresh", {
+    const res = await fetch(`${API_URL}/api/auth/refresh`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

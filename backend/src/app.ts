@@ -7,8 +7,13 @@ const app: Application = express();
 // Middlewares
 app.use(
   cors({
-    origin: ["http://localhost:3000"], // Array of allowed origins
-    credentials: true, // Enable to allow HTTP cookies over CORS
+    origin: [
+      "http://localhost:3000",
+      "https://task-management-system-sepia-five.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   }),
 );
 app.use(express.json());
